@@ -1,3 +1,88 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --gray0: #ddd;
+    --gray1: silver;
+    --gray2: gray;
+    --gray3: dimgray;
+    --link-color: DarkTurquoise;
+    --link-color-on: DeepPink;
+}
+
+html {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+a,
+a:visited {
+    color: var(--link-color);
+    cursor: default;
+    text-decoration: none;
+    transition: all 0.5s ease 0s !important;
+}
+
+a:hover {
+    color: var(--link-color-on);
+    text-decoration: none;
+    transition: all 0s ease 0s !important;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: bold;
+    margin: 0;
+}
+
+ul {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/*******************************************************************************
+TABLE
+*******************************************************************************/
+
+.tagtable th {
+    @apply font-normal uppercase;
+}
+
+.tagtable td {
+    @apply px-4;
+}
+
+/*******************************************************************************
+TYPOGRAPHY
+*******************************************************************************/
+
+@font-face {
+    font-family: "AHAMONO-Regular";
+    src: url("AHAMONO-Regular.woff") format("woff");
+}
+
+/* a {
+    text-decoration: underline solid transparent;
+    transition: text-decoration 0.33s ease;
+}
+
+a:hover {
+    text-decoration: underline solid currentColor;
+    transition: text-decoration 0s ease;
+} */

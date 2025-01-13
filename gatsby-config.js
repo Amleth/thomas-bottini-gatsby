@@ -2,9 +2,21 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  pathPrefix: '/me',
   siteMetadata: {
-    title: `Thomas Bottini Knowledge Base`,
-    siteUrl: `https://www.yourdomain.tld`
+    tba: `توما هاشم بوتيني`,
+    tbu: 'Тома Хашем Ботіні',
+    siteUrl: `https://amleth.github.io/me`
   },
-  plugins: ["gatsby-plugin-postcss"]
+  plugins: [
+    "gatsby-plugin-postcss",
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "kb",
+        "path": `${__dirname}/__kb__/`,
+      },
+      __key: "kb"
+    },
+  ]
 };
